@@ -1,4 +1,8 @@
 import React from 'react'
+import { Button } from '@mui/material';
+import { TextField } from '@mui/material';
+
+
 import './Form.css'
 
 export default function Form({data, setData, setMessage}) {
@@ -20,16 +24,18 @@ export default function Form({data, setData, setMessage}) {
 
   return (
 	<form onSubmit={submitForm}>
-	
-	<input className='input-name' placeholder="Имя" value={author} onChange = {(e)=>
-		setData(pervstate => ({...pervstate, author: e.target.value}))} />
+
+
+	<TextField id="outlined-basic" label="Имя" variant="outlined" value={author} onChange = {(e)=>
+		setData(pervstate => ({...pervstate, author: e.target.value}))}/>
 		<br/>
 
-		<input className='input-name' placeholder="Текст" value={text} onChange = {(e)=>
-			setData(pervstate => ({...pervstate, text: e.target.value}))} />
+		<TextField id="outlined-basic" label="Текст" variant="outlined" value={text} onChange = {(e)=>
+			setData(pervstate => ({...pervstate, text: e.target.value}))}/>
 			<br/>
 		
-		<button className='btn' type="submit">Отправить</button>
+		<Button variant="contained" type="submit">Contained</Button>
+
 </form>
   )
 }
