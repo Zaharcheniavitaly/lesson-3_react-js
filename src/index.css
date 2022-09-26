@@ -18,6 +18,27 @@ code {
     monospace;
 }
 
+.mess-list-text{
+	margin-top: 75px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.list-wrapp{
+	width: 200px;
+	padding: 5px;
+	border: solid 2px rgb(64, 175, 223);
+	background-color: #fff;
+	color: #402e91;
+}
+
+.list{
+	list-style-type: none;
+	font-size: 22px;
+	font-weight: 600;
+}
+
 .title{
 	font-size: 30px;
 	color: rgb(238, 234, 242);
@@ -30,7 +51,6 @@ code {
 .form-wrap{
 	width: 600px;
 	padding: 5px;
-	margin-top: 70px;
 
 	border: solid 2px rgb(64, 175, 223);
 	background-color: #fff;
