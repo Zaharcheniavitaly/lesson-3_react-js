@@ -3,6 +3,8 @@ import Header from "./Components/Header";
 import PropTypes  from 'prop-types';
 import Form from "./Components/Form";
 import Message from "./Components/Message";
+import { List } from "@mui/material";
+
 
 
 
@@ -23,21 +25,17 @@ function App() {
 	}]);
 
 	let list = messageList.map((user)=> (
-			<li key={user.id}>
-			{user.id} {user.author}
-			</li>
+		<li 
+			key={user.id} style={{marginBottom: '10px'}}>
+			{user.author}
+		</li>
 	));
 	
 
 	const [messageBody, setMessageBody] = useState({
-		id: '',
 		text: '',
 		author: ''
 	})
-
-	
-	
-		
 
 	const ROBOT_MESSAGE = `Привет Виталий, деваться некуда, надо учить`
 
@@ -56,9 +54,12 @@ setTimeout(()=>{
 		<Header/>
 		<section className="mess-list-text">
 			<div className="list-wrapp">
-					<ul className="list">
+			<h2 className="list-title">Список авторов сообщений</h2>
+			<List>
+					<ol className="list">					
 						{list}
-					</ul>
+					</ol>
+			</List>
 			</div>
 			
 			<div className="form-wrap">	
@@ -81,8 +82,7 @@ setTimeout(()=>{
 		</section>
 		
 	</div>	 
-	);
-	
+	);	
 }
 
 App.propTypes = {
