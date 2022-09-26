@@ -20,8 +20,9 @@ code {
 
 .title{
 	font-size: 30px;
-	color: rgb(102, 30, 170);
-	background-color: rgb(243, 171, 171);
+	color: rgb(238, 234, 242);
+	background-color: rgb(62, 146, 214);
+
 	padding: 10px;
 	text-align: center;
 }
@@ -29,6 +30,10 @@ code {
 .form-wrap{
 	width: 600px;
 	padding: 5px;
-	border: solid 2px rgb(243, 171, 171);
+	margin-top: 70px;
+
+	border: solid 2px rgb(64, 175, 223);
 	background-color: #fff;
+	color: #da61bf;
+	color: #826fd8;
 }

@@ -1,4 +1,5 @@
 import React, {useState, useEffect}  from "react";
+import Header from "./Components/Header";
 import PropTypes  from 'prop-types';
 import Form from "./Components/Form";
 import Message from "./Components/Message";
@@ -8,11 +9,11 @@ import Message from "./Components/Message";
 function App() {
 
 	const [messageList, setMessageList] = useState([{
-		id: '1',
+		id: 1,
 		author: 'Vitaly',
 		text: 'Привет, Verber, очень сложно идет изучение React!!!'
 	}, {
-		id: '2',
+		id: 2,
 		author: '',
 		text: ''
 	}]);
@@ -37,14 +38,14 @@ setTimeout(()=>{
 	}
 }, [messageList])
 
-	// const messData = {
-	// 	messText: 'Привет, ROBOT, очень сложно идет изучение React!!!'
-	// }
-
 
 	return (
 	<div className="app">
-	<div className="form-wrap">
+
+			<Header/>
+	
+		<div className="form-wrap">
+	
 
 		<h1 className="title">Сообщения</h1>
 
@@ -52,18 +53,23 @@ setTimeout(()=>{
 
    <div className="messageList">
       {
-		messageList.map((mess, i) => <Message  key={i}
-		author={mess.author} text={mess.text} />		  
+		messageList.map((mess) => <Message  
+		key={mess.id} 
+		id={mess.id} 
+		author={mess.author} 
+		text={mess.text} />		  
 	)}
 			</div>
+
 		</div>
+		
 	</div>	 
 	);
 	
 }
 
 App.propTypes = {
-	messageList: PropTypes.arrayOf(PropTypes.object).isRequired
+	messageList: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default App;  
