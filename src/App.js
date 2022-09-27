@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import PropTypes  from 'prop-types';
 import Form from "./Components/Form";
 import Message from "./Components/Message";
+import Liuser from "./Components/Liuser";
 import { List } from "@mui/material";
 
 
@@ -24,12 +25,9 @@ function App() {
 		text: ''
 	}]);
 
-	let list = messageList.map((user)=> (
-		<li 
-			key={user.id} style={{marginBottom: '10px'}}>
-			{user.author}
-		</li>
-	));
+	let list = messageList.map((user)=> 
+		<Liuser key={user.id} author={user.author} />
+	);
 	
 
 	const [messageBody, setMessageBody] = useState({
@@ -50,36 +48,35 @@ setTimeout(()=>{
 
 	return (
 	<div className="app">
-
 		<Header/>
-		<section className="mess-list-text">
-			<div className="list-wrapp">
-			<h2 className="list-title">Список авторов сообщений</h2>
-			<List>
-					<ol className="list">					
-						{list}
-					</ol>
-			</List>
-			</div>
-			
-			<div className="form-wrap">	
+			<section className="mess-list-text">
+				<div className="list-wrapp">
+					<h2 className="list-title">Список авторов сообщений</h2>
+						<List>
+								<ol className="list">					
+									{list}
+								</ol>
+						</List>
+				</div>
+				
+				<div className="form-wrap">	
 
-					<h1 className="title">Сообщения</h1>
+						<h1 className="title">Сообщения</h1>
 
-					<Form data={messageBody} setData = {setMessageBody} setMessage = {setMessageList}></Form>
+						<Form data={messageBody} setData = {setMessageBody} setMessage = {setMessageList}></Form>
 
-						<div className="messageList">
-								{
-								messageList.map((mess) => <Message  
-								key={mess.id} 
-								id={mess.id} 
-								author={mess.author} 
-								text={mess.text} />		  
-								)}
-						</div>
+							<div className="messageList">
+									{
+									messageList.map((mess) => <Message  
+									key={mess.id} 
+									id={mess.id} 
+									author={mess.author} 
+									text={mess.text} />		  
+									)}
+							</div>
 
-			</div>
-		</section>
+				</div>
+			</section>
 		
 	</div>	 
 	);	
