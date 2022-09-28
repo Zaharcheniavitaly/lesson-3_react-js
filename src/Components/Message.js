@@ -19,5 +19,9 @@ author: PropTypes.string,
 text: PropTypes.string
 	}
 
+// Message.propTypes = {
+// 	someProp: PropTypes.bool.isRequired
+// 		}
+
 export default  Message
 
