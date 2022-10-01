@@ -25,8 +25,8 @@ function App() {
 		text: ''
 	}]);
 
-	let list = messageList.map((user)=> 
-		<Liuser key={user.id} author={user.author} />
+	let list = messageList.map((user, i)=> 
+		<Liuser key={i} author={user.author} />
 	);
 	
 
@@ -67,8 +67,8 @@ setTimeout(()=>{
 
 							<div className="messageList">
 									{
-									messageList.map((mess) => <Message  
-									key={mess.id} 
+									messageList.map((mess, i) => <Message  
+									key={i} 
 									id={mess.id} 
 									author={mess.author} 
 									text={mess.text} />		  
@@ -82,9 +82,9 @@ setTimeout(()=>{
 	);	
 }
 
-App.propTypes = {
-	messageList: PropTypes.arrayOf(PropTypes.object).isRequired
-}
+// App.propTypes = {
+// 	messageList: PropTypes.arrayOf(PropTypes.object).isRequired
+// }
 
 export default App;  
 
