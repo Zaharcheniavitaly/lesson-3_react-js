@@ -1,0 +1,10 @@
+
+.nav{
+	padding: 20px;
+	grid-area: n;
+	background-color: rgb(85, 13, 153);
+	}
+
+	.item{
+		color: white;
+	}
