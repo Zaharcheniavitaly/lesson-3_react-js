@@ -5,60 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(69, 93, 177);
-}
-
-.app{
-	max-width: 1200px;
-	margin: 0 auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.mess-list-text{
-	margin-top: 75px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-.list-wrapp{
-	width: 200px;
-	padding: 5px;
-	padding-top: 17px;
-	background-color: #fff;
-	color: rgb(144, 17, 17);
-}
-
-.list{
-	font-size: 22px;
-	font-weight: 600;
-}
-
-.list-title{
-	font-size: 18px;
-	color: rgb(238, 234, 242);
-	background-color: rgb(62, 146, 214);
-	padding-top: 5px;
-	padding-bottom: 5px;
-	text-align: center;
-}
-
-.title{
-	font-size: 30px;
-	color: rgb(238, 234, 242);
-	background-color: rgb(62, 146, 214);
-	padding: 10px;
-	text-align: center;
-}
-
-.form-wrap{
-	width: 600px;
-	padding: 5px;
-	border: solid 2px rgb(64, 175, 223);
-	background-color: #fff;
-	color: #826fd8;
 }
